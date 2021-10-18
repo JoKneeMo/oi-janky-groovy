@@ -2,19 +2,13 @@ arches = [
 	// see https://www.debian.org/ports/#portlist-released
 	// see also https://lists.debian.org/debian-devel-announce/2016/10/msg00008.html ("Release Architectures for Debian 9 'Stretch'")
 	'amd64',
-	'arm32v5',
-	'arm32v7',
 	'arm64v8',
 	'i386',
-	'mips64le',
-	'ppc64le',
-	'riscv64',
-	's390x',
 ] as Set
 
 // https://github.com/debuerreotype/debuerreotype/releases
 debuerreotypeVersion = '0.13'
-debuerreotypeExamplesCommit = '347363625abde3b06f4fc6790f6d13a70d1cf570' // to pull in a newer commit of examples/ (can be even with debuerreotypeVersion)
+debuerreotypeExamplesCommit = '0.13' // to pull in a newer commit of examples/ (can be even with debuerreotypeVersion)
 
 // build some arches explicitly elsewhere for speed/reliability
 buildArch = [
