@@ -11,7 +11,7 @@ node('master') {
 		checkout([
 			$class: 'GitSCM',
 			userRemoteConfigs: [
-				[url: 'https://github.com/docker-library/oi-janky-groovy.git'],
+				[url: 'https://github.com/JoKneeMo/oi-janky-groovy.git'],
 			],
 			branches: [
 				[name: '*/master'],

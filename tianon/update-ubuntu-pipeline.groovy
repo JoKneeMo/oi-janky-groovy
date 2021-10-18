@@ -54,7 +54,7 @@ node {
 			git config user.name 'Docker Library Bot'
 			git config user.email 'github+dockerlibrarybot@infosiftr.com'
 
-			docker build --pull --tag oisupport/update.sh 'https://github.com/docker-library/oi-janky-groovy.git#:update.sh'
+			docker build --pull --tag oisupport/update.sh 'https://github.com/JoKneeMo/oi-janky-groovy.git#:update.sh'
 		'''
 	}
 

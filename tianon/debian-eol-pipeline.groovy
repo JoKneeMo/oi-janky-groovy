@@ -10,7 +10,7 @@ properties([
 
 def vars = fileLoader.fromGit(
 	'tianon/debuerreotype/vars.groovy', // script
-	'https://github.com/docker-library/oi-janky-groovy.git', // repo
+	'https://github.com/JoKneeMo/oi-janky-groovy.git', // repo
 	'master', // branch
 	null, // credentialsId
 	'master', // node/label

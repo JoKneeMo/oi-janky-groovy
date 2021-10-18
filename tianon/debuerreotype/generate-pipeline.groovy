@@ -9,7 +9,7 @@ properties([
 // we can't use "load()" here because we don't have a file context (or a real checkout of "oi-janky-groovy" -- the pipeline plugin hides that checkout from the actual pipeline execution)
 def vars = fileLoader.fromGit(
 	'tianon/debuerreotype/vars.groovy', // script
-	'https://github.com/docker-library/oi-janky-groovy.git', // repo
+	'https://github.com/JoKneeMo/oi-janky-groovy.git', // repo
 	'master', // branch
 	null, // credentialsId
 	'master', // node/label
@@ -38,7 +38,7 @@ node('master') {
 							scm {
 								git {
 									remote {
-										url('https://github.com/docker-library/oi-janky-groovy.git')
+										url('https://github.com/JoKneeMo/oi-janky-groovy.git')
 									}
 									branch('*/master')
 									extensions {
@@ -70,7 +70,7 @@ node('master') {
 						script("""
 							def vars = fileLoader.fromGit(
 								'tianon/debuerreotype/vars.groovy', // script
-								'https://github.com/docker-library/oi-janky-groovy.git', // repo
+								'https://github.com/JoKneeMo/oi-janky-groovy.git', // repo
 								'master', // branch
 								null, // credentialsId
 								'master', // node/label
@@ -107,7 +107,7 @@ node('master') {
 						scm {
 							git {
 								remote {
-									url('https://github.com/docker-library/oi-janky-groovy.git')
+									url('https://github.com/JoKneeMo/oi-janky-groovy.git')
 								}
 								branch('*/master')
 								extensions {
