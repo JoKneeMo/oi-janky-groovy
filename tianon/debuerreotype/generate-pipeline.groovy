@@ -31,7 +31,7 @@ node('master') {
 					// see https://issues.jenkins-ci.org/browse/JENKINS-31832?focusedCommentId=343307&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-343307
 					configure { it / 'properties' << 'org.jenkinsci.plugins.workflow.job.properties.DisableConcurrentBuildsJobProperty' { } }
 					parameters {
-						stringParam('timestamp', 'today 00:00:00', 'A string that "date(1)" can parse.')
+						stringParam('timestamp', '2021-10-09 02:47:46 Z', 'A string that "date(1)" can parse.')
 					}
 					definition {
 						cpsScm {
@@ -63,7 +63,7 @@ node('master') {
 				// see https://issues.jenkins-ci.org/browse/JENKINS-31832?focusedCommentId=343307&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-343307
 				configure { it / 'properties' << 'org.jenkinsci.plugins.workflow.job.properties.DisableConcurrentBuildsJobProperty' { } }
 				parameters {
-					stringParam('timestamp', 'today 00:00:00', 'A string that "date(1)" can parse.')
+					stringParam('timestamp', '2021-10-09 02:47:46 Z', 'A string that "date(1)" can parse.')
 				}
 				definition {
 					cps {
