@@ -54,10 +54,10 @@ node(multiarchVars.node(env.BUILD_ARCH, env.ACT_ON_IMAGE)) {
 			deleteDir()
 			stage('Download') {
 				sh '''
-					curl -o 'debuerreotype.tgz' "https://github.com/debuerreotype/debuerreotype/archive/${debuerreotypeVersion}.tar.gz"
+					curl -L -o 'debuerreotype.tgz' "https://github.com/debuerreotype/debuerreotype/archive/${debuerreotypeVersion}.tar.gz"
 					tar -xf debuerreotype.tgz --strip-components=1
 					if [ "$debuerreotypeExamplesCommit" != "$debuerreotypeVersion" ]; then
-						curl -o 'debuerreotype-examples.tgz' "https://github.com/debuerreotype/debuerreotype/archive/${debuerreotypeExamplesCommit}.tar.gz"
+						curl -L -o 'debuerreotype-examples.tgz' "https://github.com/debuerreotype/debuerreotype/archive/${debuerreotypeExamplesCommit}.tar.gz"
 						rm -rf examples
 						tar -xf debuerreotype-examples.tgz --strip-components=1 \
 							"debuerreotype-${debuerreotypeExamplesCommit}/.docker-image.sh" \

@@ -20,7 +20,7 @@ node { ansiColor('xterm') {
 				stage(arch) {
 					sh '''
 						trap 'rm "$ARCH.zip"' EXIT
-						curl -o "$ARCH.zip" "https://doi-janky.infosiftr.net/job/tianon/job/docker-deb/job/$ARCH/lastSuccessfulBuild/artifact/**/*zip*/archive.zip" || exit 0
+						curl -L -o "$ARCH.zip" "https://doi-janky.infosiftr.net/job/tianon/job/docker-deb/job/$ARCH/lastSuccessfulBuild/artifact/**/*zip*/archive.zip" || exit 0
 						unzip "$ARCH.zip"
 					'''
 				}
